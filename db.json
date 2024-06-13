@@ -71,13 +71,11 @@
       "userId": "4111207-5f9c-4e20-912f"
     },
     {
-      "id": "b5819625-9939-43dc-831b-30e59eaa7d2c",
-      "month": 1,
       "date": "2024-01-01",
-      "item": "ddd",
-      "amount": 100000,
-      "description": "dddd",
-      "createBy": "test-3333"
+      "item": "간식",
+      "amount": 100,
+      "description": "초코",
+      "id": "b5819625-9939-43dc-831b-30e59eaa7d2c"
     }
   ]
 }
