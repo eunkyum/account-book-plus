@@ -8,7 +8,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 20px;
   background-color: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 20px;
 `;
 
 const InputGroup = styled.div`
@@ -29,12 +29,16 @@ const InputGroup = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #0064ff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   margin-bottom: 10px;
+`;
+
+const Title = styled.h2`
+  font-size: 24px;
 `;
 
 export default function Profile({ user, setUser }) {
@@ -57,7 +61,7 @@ export default function Profile({ user, setUser }) {
     <Container>
       <h2>프로필 수정</h2>
       <InputGroup>
-        <label htmlFor="nickname">닉네임</label>
+        <label htmlFor="nickname"></label>
         <input
           type="text"
           placeholder="닉네임"
@@ -67,7 +71,7 @@ export default function Profile({ user, setUser }) {
         />
       </InputGroup>
       <InputGroup>
-        <label htmlFor="avatar">아바타 이미지</label>
+        <label htmlFor="avatar"></label>
         <input type="file" accept="image/*" onChange={(e) => setAvatar(e.target.files[0])} />
       </InputGroup>
       <Button onClick={handleUpdateProfile}>프로필 업데이트</Button>

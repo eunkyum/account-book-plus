@@ -7,7 +7,7 @@ const Container = styled.div`
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #748cab;
+  background-color: #f1eddd;
   border-radius: 8px;
 `;
 
@@ -29,8 +29,8 @@ const InputGroup = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #1d2d44;
-  color: white;
+  background-color: #b7baa3;
+  color: #010a00;
   border: none;
   border-radius: 4px;
   cursor: pointer;

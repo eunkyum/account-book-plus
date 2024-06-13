@@ -11,10 +11,11 @@ const Container = styled.main`
   flex-direction: column;
   gap: 20px;
   margin: 0 auto;
+  background-color: #ffffff;
 `;
 
 export const Section = styled.section`
-  background-color: #ffffff;
+  background-color: transparent;
   border-radius: 16px;
   padding: 20px;
 `;

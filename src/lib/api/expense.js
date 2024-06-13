@@ -39,6 +39,17 @@ export const putExpense = async (updatedExpense) => {
     return data;
   } catch (err) {
     console.log(err);
-    alert('뭔가 잘못된 것 같아요! 데이터가 써지지가 않아요!');
+    alert('뭔가 잘못된 것 같아요! 데이터가 수정되지가 않아요!');
+  }
+};
+
+export const deleteExpense = async (id) => {
+  console.log(id);
+  try {
+    const { data } = await axios.delete(`${JSON_SERVER_HOST}/expenses/${id}`);
+    return data;
+  } catch (err) {
+    console.log(err);
+    alert('뭔가 잘못된 것 같아요! 데이터가 삭제되지가 않아요!');
   }
 };

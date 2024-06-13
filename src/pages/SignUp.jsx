@@ -7,7 +7,7 @@ const Container = styled.div`
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #748cab;
+  background-color: transparent;
   border-radius: 8px;
 `;
 
@@ -29,25 +29,25 @@ const InputGroup = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #1d2d44;
+  background-color: #0064ff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 15px;
   cursor: pointer;
   margin-bottom: 10px;
 
   &:disabled {
-    background-color: #1d2d44;
+    background-color: #0064ff;
   }
 `;
 
 const ToggleButton = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #1d2d44;
+  background-color: #0064ff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 15px;
   cursor: pointer;
 `;
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useQuery, useMutation } from '@tanstack/react-query';
-import { getExpense, putExpense } from '../lib/api/expense';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { getExpense, putExpense, deleteExpense } from '../lib/api/expense';
 
 const Container = styled.div`
   max-width: 800px;
@@ -62,6 +62,7 @@ const BackButton = styled(Button)`
 export default function Detail() {
   const navigate = useNavigate();
   const { id } = useParams();
+  const queryClient = useQueryClient();
 
   const { data: selectedExpense, isLoading, error } = useQuery({ queryKey: ['expenses', id], queryFn: getExpense });
 
@@ -82,8 +83,16 @@ export default function Detail() {
   const mutationEdit = useMutation({
     mutationFn: putExpense,
     onSuccess: () => {
-      queryClient.invalidateQueries(['expenses']); // rud를 했을 때 queryKey값을 다 날리는 기술 습득!!
       navigate('/');
+      queryClient.invalidateQueries(['expenses']); // rud를 했을 때 queryKey값을 다 날리는 기술 습득!!, 현재 여기는 캐쉬처리를 하지 않고 있기 때문에 삭제해도 무방함
+    },
+  });
+
+  const mutationDelete = useMutation({
+    mutationFn: deleteExpense,
+    onSuccess: () => {
+      navigate('/');
+      queryClient.invalidateQueries(['expenses']); // 삭제 후 캐시 무효화
     },
   });
 
@@ -110,10 +119,8 @@ export default function Detail() {
     navigate('/');
   };
 
-  const deleteExpense = () => {
-    const newExpenses = expenses.filter((expense) => expense.id !== id);
-    setExpenses(newExpenses);
-    navigate('/');
+  const handleDelete = () => {
+    mutationDelete.mutate(id);
   };
 
   return (
@@ -148,7 +155,7 @@ export default function Detail() {
       </InputGroup>
       <ButtonGroup>
         <Button onClick={editExpense}>수정</Button>
-        <Button danger="true" onClick={deleteExpense}>
+        <Button danger="true" onClick={handleDelete}>
           삭제
         </Button>
         <BackButton onClick={() => navigate(-1)}>뒤로 가기</BackButton>
