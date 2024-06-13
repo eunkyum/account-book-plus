@@ -65,17 +65,10 @@ const ExpenseDetails = styled.div`
 export default function ExpenseList() {
   const navigate = useNavigate();
 
-  const { data: expenses = [], isLoading, error } = useQuery({ queryKey: ['expense'], queryFn: getExpenses });
-
-  console.log('isLoading:', isLoading);
-  console.log('expense:', expenses);
+  const { data: expenses = [], isLoading, error } = useQuery({ queryKey: ['expenses'], queryFn: getExpenses });
 
   if (isLoading) {
-    return <>로딩중</>;
-  }
-
-  if (error) {
-    return <>오류 발생: {error.message}</>;
+    return <div>로딩중 입니다.</div>;
   }
 
   return (
