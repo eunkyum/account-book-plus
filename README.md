@@ -1,9 +1,24 @@
-# React + Vite
+#💸가계부
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📅개발 기간
 
-Currently, two official plugins are available:
+- 2024.06.10 ~ 06.14
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# assignment-3-answer
+  <br/>
+
+### ⚙ 구현 기능
+
+1. 로그인, 회원 가입
+
+2. CRUD
+
+   - 지출 내용 등록
+   - 지출 내용 수정
+   - 지출 내용 삭제
+
+3. 내 프로필
+
+   - 프로필 사진 변경
+   - 닉네임 수정
+
+   <br/>
