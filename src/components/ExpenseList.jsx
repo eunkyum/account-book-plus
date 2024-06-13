@@ -1,6 +1,8 @@
-import { Section } from "../pages/Home";
-import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { Section } from '../pages/Home';
+import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { getExpenses } from '../lib/api/expense';
 
 const ExpenseItemList = styled.div`
   display: flex;
@@ -60,8 +62,21 @@ const ExpenseDetails = styled.div`
   }
 `;
 
-export default function ExpenseList({ expenses }) {
+export default function ExpenseList() {
   const navigate = useNavigate();
+
+  const { data: expenses = [], isLoading, error } = useQuery({ queryKey: ['expense'], queryFn: getExpenses });
+
+  console.log('isLoading:', isLoading);
+  console.log('expense:', expenses);
+
+  if (isLoading) {
+    return <>로딩중</>;
+  }
+
+  if (error) {
+    return <>오류 발생: {error.message}</>;
+  }
 
   return (
     <Section>

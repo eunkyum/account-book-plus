@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Layout from './components/Layout';
 import { useEffect, useState } from 'react';
-import { getUserInfo } from './lib/api/auth';
+// import { getUserInfo } from './lib/api/auth';
 import './App.css';
 
 function App() {
