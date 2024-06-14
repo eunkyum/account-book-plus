@@ -7,7 +7,7 @@ const Container = styled.div`
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f1eddd;
+  background-color: white;
   border-radius: 8px;
 `;
 
@@ -29,25 +29,25 @@ const InputGroup = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #b7baa3;
-  color: #010a00;
+  background-color: #4f7a39;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   margin-bottom: 10px;
 
   &:disabled {
-    background-color: #1d2d44;
+    background-color: #4f7a39;
   }
 `;
 
 const ToggleButton = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #1d2d44;
+  background-color: #4f7a39;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
 `;
 
@@ -69,11 +69,11 @@ export default function SignIn({ setUser }) {
   return (
     <Container>
       <InputGroup>
-        <label htmlFor="id">아이디</label>
+        <label htmlFor="id"></label>
         <input type="text" onChange={(e) => setId(e.target.value)} placeholder="아이디" />
       </InputGroup>
       <InputGroup>
-        <label htmlFor="password">비밀번호</label>
+        <label htmlFor="password"></label>
         <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="비밀번호" />
       </InputGroup>
       <Button onClick={handleSignIn}>로그인</Button>

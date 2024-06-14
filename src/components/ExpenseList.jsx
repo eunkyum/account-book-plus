@@ -16,7 +16,7 @@ const ExpenseItem = styled.div`
   align-items: center;
   padding: 15px 20px;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #fffaf2;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
@@ -32,7 +32,7 @@ const ExpenseItem = styled.div`
 
   span:last-child {
     font-weight: bold;
-    color: #007bff;
+    color: #4f7a39;
     flex-shrink: 0;
   }
 `;

@@ -115,7 +115,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -124,5 +124,5 @@ table {
 }
 
 body {
-  background-color: #2ec4b6;
+  background-color: #ffffff;
 }

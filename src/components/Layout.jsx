@@ -4,8 +4,8 @@ import { getUserInfo } from '../lib/api/auth';
 import { useEffect } from 'react';
 
 const Navbar = styled.nav`
-  background-color: #7a7872;
-  color: #010a00;
+  background-color: #4f7a39;
+  color: white;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ const NavItems = styled.div`
 `;
 
 const NavItem = styled(Link)`
-  color: #010a00;
+  color: white;
   margin: 0 10px;
   text-decoration: none;
 

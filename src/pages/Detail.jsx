@@ -8,7 +8,7 @@ const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #fffaf2;
   border-radius: 16px;
 `;
 
@@ -20,15 +20,15 @@ const InputGroup = styled.div`
   label {
     margin-bottom: 5px;
     font-size: 14px;
-    color: #333;
+    color: #0000;
     text-align: left;
   }
 
   input {
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    border: 2px solid #7a7672;
+    border-radius: 18px;
+    font-size: 20px;
   }
 `;
 

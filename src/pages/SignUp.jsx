@@ -29,7 +29,7 @@ const InputGroup = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #0064ff;
+  background-color: #4f7a39;
   color: white;
   border: none;
   border-radius: 15px;
@@ -37,14 +37,14 @@ const Button = styled.button`
   margin-bottom: 10px;
 
   &:disabled {
-    background-color: #0064ff;
+    background-color: #4f7a39;
   }
 `;
 
 const ToggleButton = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #0064ff;
+  background-color: #4f7a39;
   color: white;
   border: none;
   border-radius: 15px;
@@ -84,7 +84,7 @@ export default function SignUp() {
   return (
     <Container>
       <InputGroup>
-        <label htmlFor="id">아이디</label>
+        <label htmlFor="id"></label>
         <input
           type="text"
           value={id}
@@ -95,11 +95,11 @@ export default function SignUp() {
         />
       </InputGroup>
       <InputGroup>
-        <label htmlFor="password">비밀번호</label>
+        <label htmlFor="password"></label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="아이디" />
       </InputGroup>
       <InputGroup>
-        <label htmlFor="nickname">닉네임</label>
+        <label htmlFor="nickname"></label>
         <input type="text" value={nickname} onChange={(e) => setNickname(e.target.value)} placeholder="닉네임" />
       </InputGroup>
       <Button onClick={handelRegister}>회원가입</Button>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Section } from "../pages/Home";
+import styled from 'styled-components';
+import { Section } from '../pages/Home';
 
 const MonthWrapper = styled.div`
   display: flex;
@@ -23,20 +23,14 @@ const MonthButton = styled.button`
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  color: ${(props) =>
-    props.selected
-      ? "var(--white-alpha-100, #fff)"
-      : "var(--black-alpha-100, #000)"};
+  color: ${(props) => (props.selected ? 'var(--white-alpha-100, #fff)' : 'var(--black-alpha-100, #000)')};
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  background: ${(props) =>
-    !props.selected
-      ? "var(--black-alpha-100, #F6F7FA)"
-      : "var(--bg-form, #2EC4B6)"};
+  background: ${(props) => (!props.selected ? 'var(--black-alpha-100, #F6F7FA)' : 'var(--bg-form, #4f7a39)')};
 
   &:hover {
-    background: #2ec4b6;
+    background: #4f7a39;
     color: #fff;
   }
 `;

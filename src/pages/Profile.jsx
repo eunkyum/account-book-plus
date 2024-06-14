@@ -7,7 +7,7 @@ const Container = styled.div`
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: white;
   border-radius: 20px;
 `;
 
@@ -29,16 +29,12 @@ const InputGroup = styled.div`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #0064ff;
+  background-color: #4f7a39;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   margin-bottom: 10px;
-`;
-
-const Title = styled.h2`
-  font-size: 24px;
 `;
 
 export default function Profile({ user, setUser }) {
@@ -59,7 +55,7 @@ export default function Profile({ user, setUser }) {
 
   return (
     <Container>
-      <h2>프로필 수정</h2>
+      {/* <h2>프로필 수정</h2> */}
       <InputGroup>
         <label htmlFor="nickname"></label>
         <input
